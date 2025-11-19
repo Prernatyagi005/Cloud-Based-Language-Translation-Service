@@ -29,6 +29,8 @@ Free Translation API (MyMemory)
 ↓
 Response Back to User
 
+---
+
 
 ## Project Structure  
 cloud-language-translation-service/
@@ -49,6 +51,8 @@ cloud-language-translation-service/
 ├── LICENSE
 └── README.md
 
+---
+
 ## 🚀 How It Works  
 1. User enters English text and selects a target language  
 2. Frontend sends request → API Gateway  
@@ -56,6 +60,7 @@ cloud-language-translation-service/
 4. Lambda calls **MyMemory Translation API**  
 5. Translated text is returned to the frontend
 
+---
 
 ## 🔧 Tech Stack  
 ### **Frontend:**  
