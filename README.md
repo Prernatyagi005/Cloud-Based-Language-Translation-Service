@@ -1,12 +1,10 @@
-# Cloud Translation Service
-
-# Cloud-Based Language Translation Service  
+# 🌐 Cloud-Based Language Translation Service  
 A fully serverless cloud application built using **AWS Lambda**, **API Gateway**, and **S3**.  
 The system translates English text into multiple languages using a free translation API.
 
 ---
 
-## Features  
+## 📌 Features  
 ✔ Translate English text into multiple languages  
 ✔ Fully serverless backend using AWS Lambda  
 ✔ Frontend hosted using AWS S3  
@@ -16,7 +14,8 @@ The system translates English text into multiple languages using a free translat
 
 ---
 
-## Architecture  
+## 🏗 Architecture  
+
 User (Browser)
 ↓
 AWS S3 (Static Frontend Hosting)
@@ -29,10 +28,13 @@ Free Translation API (MyMemory)
 ↓
 Response Back to User
 
+yaml
+Copy code
+
 ---
 
+## 🗂 Project Structure  
 
-## Project Structure  
 cloud-language-translation-service/
 │
 ├── backend/
@@ -51,6 +53,9 @@ cloud-language-translation-service/
 ├── LICENSE
 └── README.md
 
+yaml
+Copy code
+
 ---
 
 ## 🚀 How It Works  
@@ -58,7 +63,7 @@ cloud-language-translation-service/
 2. Frontend sends request → API Gateway  
 3. API Gateway triggers AWS Lambda  
 4. Lambda calls **MyMemory Translation API**  
-5. Translated text is returned to the frontend
+5. Translated text is returned to the frontend  
 
 ---
 
@@ -76,29 +81,17 @@ cloud-language-translation-service/
 ### **Hosting:**  
 - AWS S3  
 
-## Project Structure
-(Include the same folder structure)
+---
 
-## Deployment Steps
-### 1. Create Lambda function
-- Runtime: Python 3.x
-- Upload `lambda_function.py`
-- Add Layer for `requests` OR zip with dependencies
+## 🛠 Steps to Deploy on AWS
 
-### 2. Create API Gateway HTTP API
-- Connect to Lambda
-- Enable CORS
-- Deploy
-- Copy endpoint URL
+### 1️⃣ Create Lambda Function  
+- Runtime: Python 3.12  
+- Upload `lambda_function.py`  
+- Add **Requests library layer**  
+- Save & test
 
-### 3. Update Frontend
-Replace `YOUR_API_URL` in script.js
-
-### 4. Deploy Frontend to S3
-- Bucket → Enable public access
-- Upload HTML, CSS, JS
-- Enable static hosting
-
-### 5. Open Website
-Use S3 website URL.
-
+### 2️⃣ Create HTTP API (API Gateway)  
+- Connect Lambda integration  
+- Enable CORS (Allow all origins, headers, methods)  
+- Deploy API  
